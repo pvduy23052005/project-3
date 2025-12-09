@@ -14,3 +14,5 @@ block main
               else
                 .topic-card-placeholder
             .topic-card-title= topic.title
+            .topic-card-actions
+              a.topic-card-link(href=`/songs/${topic.slug || topic._id}`) Xem chi tiết

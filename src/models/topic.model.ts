@@ -12,6 +12,7 @@ const topicSchema = new mongoose.Schema({
   description: String,
   status: {
     type: String,
+    default: "active",
   },
   slug: {
     type: String,

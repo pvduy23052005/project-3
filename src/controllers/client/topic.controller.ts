@@ -1,6 +1,8 @@
 import { Request, Response } from "express"
 import Topic from "../../models/topic.model";
 
+
+// [get] /topic
 export const index = async (req: Request, res: Response) => {
   
   let find = {

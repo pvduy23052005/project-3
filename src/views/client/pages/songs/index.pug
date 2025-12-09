@@ -1,0 +1,28 @@
+extends ../../layout/layoutDefault
+
+block main
+  .topic-page
+    .topic-page-header
+      h1.topic-page-title DANH SÁCH BÀI HÁT
+      if topic && topic.title
+        p.topic-page-subtitle Chủ đề: #{topic.title}
+    .topic-grid-wrapper
+      if songs && songs.length
+        .topic-grid
+          each song in songs
+            .topic-card
+              .topic-card-avatar
+                if song.avatar
+                  img(src=song.avatar alt=song.title)
+                else
+                  .topic-card-placeholder
+                    span No image
+              .topic-card-title= song.title
+              .topic-card-actions
+                if song.audio
+                  a.topic-card-link(href=song.audio target="_blank") Nghe ngay
+                else
+                  span.topic-card-link.disabled Chưa có audio
+      else
+        p Không có bài hát trong chủ đề này.
+

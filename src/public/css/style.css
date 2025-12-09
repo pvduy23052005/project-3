@@ -264,6 +264,31 @@
   line-height: 1.4;
 }
 
+.topic-card-actions {
+  padding: 0 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.topic-card-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border-hr);
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.topic-card-link:hover {
+  color: white;
+  background-color: var(--color-hover-primary);
+  border-color: var(--color-hover-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {

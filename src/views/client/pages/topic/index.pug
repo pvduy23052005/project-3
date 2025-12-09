@@ -1,0 +1,16 @@
+extends ../../layout/layoutDefault
+
+block main
+  .topic-page
+    .topic-page-header
+      h1.topic-page-title DANH MỤC NỔI BẬT
+    .topic-grid-wrapper
+      .topic-grid
+        each topic in topics
+          .topic-card
+            .topic-card-avatar
+              if topic.avatar
+                img(src=topic.avatar alt=topic.title)
+              else
+                .topic-card-placeholder
+            .topic-card-title= topic.title
